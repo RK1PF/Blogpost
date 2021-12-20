@@ -1,0 +1,17 @@
+<%- include("includes/header") %> 
+<div>
+    <h1>Home</h1>
+    <p>
+        <% if (content) { %>
+         <%= content %>
+        <% } %>
+    </p>
+</div>
+<% posts.forEach(e => { %>
+    <div>
+        <h2><%= e.title %> </h2>
+        <p><%= e.content %> </p>
+        <p>publié le <%= e.date %> </p>
+    </div>
+<% }) %>
+<%- include("includes/footer") %> 
