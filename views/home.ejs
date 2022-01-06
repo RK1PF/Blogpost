@@ -10,8 +10,9 @@
 <% posts.forEach(e => { %>
     <div>
         <h2><%= e.title %> </h2>
-        <p><%= e.content %> </p>
-        <p>publié le <%= e.date %> </p>
+        <p><%= e.content.substring(0,100) %>...<a href="<%= e.link %> ">lire la suite</a>
+         </p>
+        <p>publié le <%= e.date.toLocaleDateString("fr-FR") %> </p>
     </div>
 <% }) %>
 <%- include("includes/footer") %> 
